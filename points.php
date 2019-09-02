@@ -13,7 +13,7 @@
 					<span> <b>500</b> рублей</span>
 				</div>
 				<p class="economy">Экономия 30%</p>
-				<a href="#" class="blue_btn ">Оплатить</a>
+				<a href="#" class="blue_btn_tubus" >Оплатить</a>
 			</div>
 			<div class="tarifs">
 				<h5>Оcновные тарифы</h5>
@@ -121,7 +121,7 @@
 							<i class="fas fa-circle" aria-hidden="true"></i>
 						</span>
 					</label>
-					<input type="text" name="number" class="pointsss client" disabled="disabled">
+					<input type="text" name="number" class="pointsss client">
 					<div class="blue_line_2"></div>
 					<div class="cost">
 						<span> <b></b> рублей</span>
@@ -134,7 +134,7 @@
 				<div class="conclusion_cost">
 					<p> <span>1000</span>рублей</p>
 				</div>
-				<a href="#" class="blue_btn">Оплатить</a>
+				<a href="#" class="blue_btn_tubus">Оплатить</a>
 			</div>
 		</div>
 	</div>

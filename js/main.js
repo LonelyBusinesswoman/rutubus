@@ -86,14 +86,61 @@ jQuery(document).ready(function($) {
       });
       // disabled/enabled input points
       if($('.client_tarif label input').attr('checked',true)){
-        $('client_tarif .client').attr('disabled', false);
+        $('.client_tarif .client').attr('disabled', false);
       }
+
       // conclusion price
-      $('.tarif input[type=checkbox]').each(function (){
-        if($(this).attr('checked', true)){
-          console.log($(this));
-          var conclusion_cost = $(this).closest('.cost span b')
-          $('.conclusion conclusion_cost  p span').text(conclusion_cost);
-        }
-    });
+      
+    //   $('.tarif input[type=checkbox]').each(function (){
+    //     if($(this).attr('checked', true)){
+    //       console.log($(this));
+    //       var conclusion_cost = $(this).closest('.cost span b')
+    //       $('.conclusion conclusion_cost  p span').text(conclusion_cost);
+    //     }
+    // });
+
+    // modal
+  $(".modal").each( function(){
+      $(this).wrap('<div class="overlay"></div>')
+  });
+  $(".open-modal").on('click', function(e){
+      e.preventDefault();
+      e.stopImmediatePropagation;
+      
+      var $this = $(this),
+              modal = $($this).data("modal");
+      
+      $(modal).parents(".overlay").addClass("open");
+      setTimeout( function(){
+          $(modal).addClass("open");
+      }, 350);
+      
+      $(document).on('click', function(e){
+          var target = $(e.target);
+          
+          if ($(target).hasClass("overlay")){
+              $(target).find(".modal").each( function(){
+                  $(this).removeClass("open");
+              });
+              setTimeout( function(){
+                  $(target).removeClass("open");
+              }, 350);
+          }
+          
+      });
+      
+  });
+  $(".close-modal").on('click', function(e){
+      e.preventDefault();
+      e.stopImmediatePropagation;
+      
+      var $this = $(this),
+              modal = $($this).data("modal");
+      
+      $(modal).removeClass("open");
+      setTimeout( function(){ 
+          $(modal).parents(".overlay").removeClass("open");
+      }, 350);
+      
+  }); 
 });

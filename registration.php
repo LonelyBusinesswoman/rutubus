@@ -66,7 +66,7 @@
 					</label>
 				</div>
 				
-				<a  class="blue_btn" href="#">Зарегистрироваться</a>
+				<a  class="blue_btn_tubus" href="#">Зарегистрироваться</a>
 			</form>
 		</div>
 	</div>
