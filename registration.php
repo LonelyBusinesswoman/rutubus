@@ -42,9 +42,6 @@
 
 				<label  for="password_two">Подтверждение пароля</label>
 				<input id="password_two" type="password" name="password" placeholder="Введите пароль">
-
-				<label  for="code">Введите код с картинки</label>
-				<input id="code" type="text" name="code" placeholder="Введите пароль">
 				
 				<div class="check">
 					<label>

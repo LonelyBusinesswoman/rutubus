@@ -44,6 +44,26 @@ jQuery(document).ready(function($) {
           div.fadeOut(100);
       }
     });
+      // MOBILE MENU SETTINGS
+      $('.mobile_menu').click(function(){
+    $('.mobile').addClass('active');
+    $('header, main, footer').addClass('blur');
+      })
+      $('.close_mob_menu').click(function(){
+        $('header, main, footer').removeClass('blur');
+        $('.mobile').removeClass('active');
+      })
+      $(document).click(function(e){
+        if( 
+          $('.mobile').hasClass('active') && 
+          $('.mobile_menu').has(e.target).length == 0 &&
+          $('.mobile').has(e.target).length == 0
+        )
+        {
+          $('header, main, footer').removeClass('blur');
+          $('.mobile').removeClass('active');
+        }
+    });
 
       // show / hide password
       $(".toggle-password").click(function() {
@@ -143,4 +163,33 @@ jQuery(document).ready(function($) {
       }, 350);
       
   }); 
+  // choose work
+  $('.get_work').on('click', function(event) {
+    event.preventDefault();
+
+    $(this).addClass('hide');
+    $(this).removeClass('active');
+
+    $(this).next().addClass('hide');
+    $(this).next().removeClass('active');
+
+    $(this).parent().find('.zakrep').addClass('active');
+    $(this).parent().find('.zakrep').removeClass('hide');
+
+  });
+
+  // no work
+  $('.no').on('click', function(event) {
+    event.preventDefault();
+
+    $(this).parents('.zakrep').addClass('hide');
+    $(this).parents('.zakrep').removeClass('active');
+
+    $(this).parents('.work_action').find('.get_work').addClass('active');
+    $(this).parents('.work_action').find('.get_work').removeClass('hide');
+
+    $(this).parents('.work_action').find('.btn_2').addClass('active');
+    $(this).parents('.work_action').find('.btn_2').removeClass('hide');
+
+  });
 });

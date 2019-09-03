@@ -16,7 +16,7 @@
 <body>
 	<div class="header">
 		<div class="logo">
-			<a href="#">Рутубус.&nbsp;рф</a>
+			<a href="index.php">Рутубус.&nbsp;рф</a>
 		</div>
 		<div class="red_line">
 			<div class="line"></div>
@@ -34,7 +34,55 @@
 		<div class="registration_and_enter">
 			<i class="fas fa-user"></i>
 			<a href="enter.php">Вход&nbsp;|</a>
-			<a href="#">&nbsp;Регистрация</a>
+			<a href="registration.php">&nbsp;Регистрация</a>
+		</div>
+		<div class="login_profile">
+			<div class="profile_h_and_balance">
+				<i class="fas fa-user"></i>
+				<p class="profile_name">Иван&nbsp;|&nbsp;</p>
+				<div class="balance">
+					<p>БАЛАНС <span>77</span> баллов</p>
+				</div>
+			</div>
+			<div class="go_profile_page">
+				<a href="profile.php">Личный кабинет</a>
+			</div>
+			<div class="main">
+				<a href="index.php">Главная</a>
+			</div>
+			<div class="exit">
+				<a href="#">Выход</a>
+			</div>
+		</div>
+
+		<div class="mobile_menu">
+			<div class="burg"></div>
+			<div class="burg"></div>
+			<div class="burg"></div>
 		</div>
 	</div>
+	<!-- mobile -->
+	<section class="mobile">
+		<div class="wrap">
+			<div class="close_mob_menu">
+				<i class="fa fa-times" aria-hidden="true"></i>
+			</div>
+			<div class="profile_h">
+				<i class="fas fa-user"></i>
+				<p class="profile_name">Иван Иванов</p>
+			</div>
+			<div class="balance">
+				<p>БАЛАНС <span>77</span> баллов</p>
+			</div>
+			<div class="go_profile_page">
+				<a href="profile.php">Личный кабинет</a>
+			</div>
+			<div class="main">
+				<a href="index.php">Главная</a>
+			</div>
+			<div class="exit">
+				<a href="#">Выход</a>
+			</div>
+		</div>
+	</section>
 	

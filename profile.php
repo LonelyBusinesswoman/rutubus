@@ -100,33 +100,35 @@
 </main>
 <div class='modal' id='modal1'>
     <div class=" content">
-		<div class="person">
-			<div class="photo">
-				<img src="img/default_photo.png">
-				<a href="#" class="upload">
-					<i class="fas fa-plus"></i>
-					<span>Загрузить фото</span>
-				</a>
-			</div>
-			<div class="person_info">
-				<div class="fio">
-					<p class="secondMame">Печугин</p>
-					<p class="firstName">Иван</p>
-					<p class="fatherName">Андреевич</p>
+    	<div class="vip_popup">	
+	    	<div class="person">
+				<div class="photo">
+					<img src="img/default_photo.png">
+					<a href="#" class="upload">
+						<i class="fas fa-plus"></i>
+						<span>Загрузить фото</span>
+					</a>
+				</div>
+				<div class="person_info">
+					<div class="fio">
+						<p class="secondMame">Печугин</p>
+						<p class="firstName">Иван</p>
+						<p class="fatherName">Андреевич</p>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="get_vip">
-			<div class="price_vip">
-				<i class="fas fa-crown"></i>
-				<span>Приобрести vip- статус за <span class="cost_vip">&nbsp;5000&nbsp;</span>рублей</span>
+			<div class="get_vip">
+				<div class="price_vip">
+					<i class="fas fa-crown"></i>
+					<span>Приобрести vip- статус за <span class="cost_vip">&nbsp;5000&nbsp;</span>рублей</span>
+				</div>
+				<div class="info_vip">
+					Вся информация о VIP аккаунте
+					<i class="fas fa-arrow-right"></i>
+				</div>
+				<a href="#" class="red_btn_tubus">Оплатить</a>
 			</div>
-			<div class="info_vip">
-				Вся информация о VIP аккаунте
-				<i class="fas fa-arrow-right"></i>
-			</div>
-			<a href="#" class="red_btn_tubus">Оплатить</a>
-		</div>
+    	</div>
 	</div>
 	<div class="close-popup close-modal js-close-campaign" data-modal="#modal1">
 		<i class="fas fa-times"></i>
