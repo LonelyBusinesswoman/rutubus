@@ -105,6 +105,35 @@ label{
 		}
 	}
 }
+// navigation
+.navigation{
+	margin:0 auto;
+	margin-top: 5%;
+	ul{
+		width: 10%;
+		display: flex;
+		li{
+			text-decoration: none;
+			margin-right: 8px;
+			list-style-type: none;
+			a{
+				font-size:16px;
+				color:#ccc;
+			}
+		}
+		.active{
+			a{
+				color:#000;
+			}
+		}
+	}
+}
+.razr{
+	text-align: center;
+	font-size:12px;
+	font-weight: bold;
+	padding-bottom: 2%;
+}
 // buttons
 .blue_btn_tubus, .red_btn_tubus, .simple_white_btn{
 	color:#fff;
@@ -235,6 +264,15 @@ label{
 			margin: 0;
 		}
 	}
+	.price{
+		display: none;
+		font-size:16px;
+		margin-bottom: 20px;
+		span{
+			font-weight: bold;
+			font-size:20px;
+		}
+	}
 	a{
 		width: 60%;
 		font-size:12px;
@@ -242,7 +280,7 @@ label{
 	}
 }
 // choose work single-work style
-.work_to_choose{
+.work_to_choose, .tub{
 	width: 100%;
 	display: flex;
 	justify-content:space-between;
@@ -357,8 +395,95 @@ label{
 		}
 	}
 }
-.tub{
+// links color tub div
+.tub .work_info .work_description .red_btn_tubus{
+	color:#fff !important;
+	text-decoration: none !important;
+	width: 150px;
+}
+.tub .work_info .work_description a{
+	color:#000 !important;
+	text-decoration: none !important;
+	margin-bottom: 0;
+}
 
+.tub{
+	.work_info{
+		width: 70%;
+		margin: 0 auto;
+		display: flex;
+		justify-content:space-around;
+		@media (max-width: 1100px) {
+			width: 100%;
+		}
+		@media (max-width: 870px) {
+			flex-direction: column;
+			align-items: center
+		}
+		.tub{
+			margin-bottom: 7%;
+		}
+		.work_img{
+			width: 250px;
+			height: 250px;
+			display: flex;
+			justify-content:center;
+			align-items:center;
+			img{
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+		.work_description{
+			width: 35%;
+			margin-left: 0;
+			@media (max-width: 870px){
+				width: 45%;
+			}
+			@media (max-width: 600px){
+				width:65%;
+			}
+			@media (max-width: 500px){
+				width:90%;
+			}
+		}
+		.name_work{
+			display: flex;
+			align-items:center;
+		}
+		.stars{
+			margin-left: 20%;
+			display: flex;
+			.fa-star{
+				font-size:17px;
+				color:#ccc;
+			}
+			.hover{
+				color:@red;
+			}
+			.selected{
+				color:@red;
+			}
+		}
+		.price{
+			margin: 5% 0;
+		}
+		.save_work{
+			display: flex;
+			justify-content:space-between;
+			align-items:center;
+			width: 100%;
+		}
+		.download{
+			display: flex;
+			align-items:center;
+			.fas{
+				color:#000;
+				font-size:30px;
+				margin-right: 5px;
+			}
+		}
+	}
 }
 // Modal
 .overlay {
@@ -871,7 +996,7 @@ label{
 			width: 35px;
 			height: 35px;
 			margin: 0 1px;
-			.fab{
+			.fab, .fas{
 				color:#fff;
 				font-size:20px;
 			}
@@ -1565,34 +1690,6 @@ main{
 			width: 100%;
 		}
 	}
-	.navigation{
-		margin:0 auto;
-		margin-top: 5%;
-		ul{
-			width: 10%;
-			display: flex;
-			li{
-				text-decoration: none;
-				margin-right: 8px;
-				list-style-type: none;
-				a{
-					font-size:16px;
-					color:#ccc;
-				}
-			}
-			.active{
-				a{
-					color:#000;
-				}
-			}
-		}
-	}
-	.razr{
-		text-align: center;
-		font-size:12px;
-		font-weight: bold;
-		padding-bottom: 2%;
-	}
 }
 // my tubus
 .my_tubus{
@@ -1635,6 +1732,9 @@ main{
 	select {
         -webkit-appearance: none;
         line-height: 1em;
+        padding:0 12px;
+        background: url(../img/arrow-down.png) 100% center;
+        background-repeat:no-repeat;
         /* for FF */
         -moz-appearance: none;
         text-indent: 0.01px;
@@ -1759,20 +1859,66 @@ main{
 		margin: 10% 0; 
 	}
 }
+// index page
+.social_fixed{
+	display: flex;
+	position:fixed;
+	left: 0;
+	top: 50%;
+	@media (max-width: 768px){
+		display: none;
+	}
+	.authorization{
+		.social{
+			flex-direction: column;
+			.social_net{
+				margin-bottom: 2px;
+			}
+			.fas{
+				color:#fff;
+			}
+		}
+	}
+}
 .main{
 	width: 80%;
 	margin: 4% auto;
 	display: flex;
 	flex-direction:column;
+	position:relative;
 	.search_and_card{
 		width: 100%;
 		display: flex;
 		align-items:center;
 		justify-content:space-between;
+		@media (max-width: 1150px){
+			flex-direction:column;
+			align-items:flex-end;
+		}
+		.search{
+			@media (max-width: 1150px){
+				order:1;
+				margin: 0;
+				margin-bottom: 20px;
+			}
+			@media (max-width: 500px){
+				width: 100%;
+			}
+		}
 		.card_tubus{
 			width: 25%;
 			display: flex;
 			justify-content:space-between;
+			@media (max-width: 1150px){
+				width: 45%;
+				order:2;
+			}
+			@media (max-width: 750px){
+				width: 60%;
+			}
+			@media (max-width: 500px){
+				width: 100%;
+			}
 			.blue_btn_tubus{
 				position:relative;
 				span{
@@ -1790,5 +1936,53 @@ main{
 				}
 			}
 		}
+	}
+	.filters, .vip_filters{
+		margin-top: 5%;
+		width: 100%;
+		display:grid;
+		grid-template-columns:repeat(5,1fr);
+		@media (max-width: 1200px){
+			grid-template-columns:repeat(4,1fr);
+		}
+		@media (max-width: 768px){
+			grid-template-columns:repeat(3,1fr);
+		}
+		@media (max-width: 500px){
+			grid-template-columns:repeat(2,1fr);
+		}
+		.filter{
+			display: flex;
+			flex-direction:column;
+			.filter_name{
+				padding-bottom: 4%;
+				color:@blue;
+			}
+		}
+	}
+	.list_of_works{
+		margin-top: 5%;
+		width: 100%;
+		display:grid;
+		grid-template-columns:repeat(4,1fr);
+		justify-content: space-between;
+    	grid-row-gap: 30px;
+    	@media (max-width: 1200px){
+				grid-template-columns: repeat(3, 1fr);
+		}
+		@media (max-width: 800px){
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: 480px){
+			grid-template-columns:1fr;
+			justify-content:center;
+		}
+		.price{
+			display: block;
+		}
+	}
+	.list_of_works_auth{
+		flex-direction:column;
+		display: flex;
 	}
 }

@@ -1,5 +1,6 @@
 jQuery(document).ready(function($) {
   // rating
+  
     $('.star').on('mouseover', function(){
     var onStar = parseInt($(this).data('value'), 10); // The star currently mouse on
  

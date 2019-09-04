@@ -9,5 +9,6 @@
 		<span>,</span>
 		<span class="format">dwg</span>
 	</div>
+		<div class="price"><span>200</span>&nbsp;Баллов</div>
 		<a href="#" class="red_btn_tubus">Скачать</a>
 </div>

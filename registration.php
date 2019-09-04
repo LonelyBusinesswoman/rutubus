@@ -13,13 +13,13 @@
 			<div class="authorization">
 				<span>Регистрация через соц.сети</span>
 				<div class="social">
-					<a class="social_net">
+					<a href="#" class="social_net">
 						<i class="fab fa-vk"></i>
 					</a>
-					<a class="social_net">
+					<a href="#" class="social_net">
 						<i class="fab fa-facebook-f"></i>
 					</a>
-					<a class="social_net">
+					<a href="#" class="social_net">
 						<i class="fab fa-odnoklassniki"></i>
 					</a>
 				</div>
